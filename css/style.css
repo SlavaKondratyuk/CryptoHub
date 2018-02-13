@@ -1,0 +1,95 @@
+
+
+
+/*.card {*/
+    /*width:33%;*/
+/*}*/
+
+/*.row {*/
+    /*display: flex;*/
+    /*width:100%;*/
+/*}*/
+
+/*.box {*/
+    /*flex-wrap:wrap;*/
+    /*display: flex;*/
+/*}*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.card-responsive{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-around;
+}
+.col {
+    width: auto;
+}
+@media (min-width: 320px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+@media  (min-width: 480px) {
+    .card-responsive  {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (min-width: 601px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}
+@media  (min-width: 768px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media  (min-width: 960px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .card-responsive  {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
