@@ -58,6 +58,9 @@ $('.modal').modal({
         ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
             // alert("Ready");
             // console.log(modal, trigger);
+
+            even(trigger[0].id);
+            ask2 = trigger[0].id;
             console.log(trigger[0].id);
 
         },
@@ -66,5 +69,5 @@ $('.modal').modal({
         } // Callback for Modal close
     }
 );
-
+let ask2;
 

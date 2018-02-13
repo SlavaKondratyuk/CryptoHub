@@ -70,7 +70,7 @@ let informBlock = document.createElement('div');
 
 
 //select directory
-let container = document.querySelector('.container');
+let container = document.querySelector('.container-grap');
 
 
 //classes
@@ -95,7 +95,7 @@ butDay.textContent = 'day';
 
 //put in
 container.append(informBlock);
-informBlock.append(input);
+// informBlock.append(input);
 informBlock.append(butClean);
 informBlock.append(but);
 informBlock.append(butHour);
@@ -107,7 +107,7 @@ let grapClass = document.querySelector('.grap');
 let enterPoint = 'https://min-api.cryptocompare.com/data/histominute?fsym=';
 let enterPointHour = 'https://min-api.cryptocompare.com/data/histohour?fsym=';
 let enterPointDay = 'https://min-api.cryptocompare.com/data/histoday?fsym='
-const currencyList = 'https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=1';
+// const currencyList = 'https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=1';
 function request (link) {
 
     // параметр link задается чтоб вместо него можно было подставлять другие аргументы для функции реквест
@@ -169,17 +169,20 @@ function request (link) {
 //     chart.update()
 // }
 
-but.addEventListener('click', even);
+but.addEventListener('click', function () {
+    even(ask2);
+});
 // grapClass.innerHTML='';
 // let canvasElem = document.createElement('canvas');
 // canvasElem.setAttribute('id','myChart');
 // grapClass.append(canvasElem);
-function even() {
-    let crypt = document.querySelector('input');
-    console.log(crypt);
-    console.log(crypt.value);
-    let ask = crypt.value.toUpperCase();
-    fetch(enterPoint+ask+'&tsym=USD&limit=60&aggregate=1')
+function even(id) {
+    // let crypt = document.querySelector('input');
+    // console.log(crypt);
+    // console.log(crypt.value);
+    // let ask = crypt.value.toUpperCase();
+    // fetch(enterPoint+ask+'&tsym=USD&limit=60&aggregate=1')
+    fetch(enterPoint+id+'&tsym=USD&limit=60&aggregate=1')
         .then (function (response) {
             return response.json();
         })
@@ -226,13 +229,16 @@ function even() {
 
         })
 }
-butHour.addEventListener('click', hour);
-function hour() {
-    let crypt = document.querySelector('input');
-    console.log(crypt);
-    console.log(crypt.value);
-    let ask = crypt.value.toUpperCase();
-    fetch(enterPointHour+ask+'&tsym=USD&limit=24&aggregate=1')
+butHour.addEventListener('click', function () {
+    hour(ask2);
+});
+function hour(id) {
+    // let crypt = document.querySelector('input');
+    // console.log(crypt);
+    // console.log(crypt.value);
+    // let ask = crypt.value.toUpperCase();
+    // fetch(enterPointHour+ask+'&tsym=USD&limit=24&aggregate=1')
+    fetch(enterPointHour+id+'&tsym=USD&limit=24&aggregate=1')
         .then (function (response) {
             return response.json();
         })
@@ -274,18 +280,22 @@ function hour() {
             });
             butClean.addEventListener('click', function () {
                 console.log('test');
+                console.log(chart);
                 removeData(chart)
             });
 
         })
 }
-butDay.addEventListener('click', day);
-function day() {
-    let crypt = document.querySelector('input');
-    console.log(crypt);
-    console.log(crypt.value);
-    let ask = crypt.value.toUpperCase();
-    fetch(enterPointDay+ask+'&tsym=USD&limit=30&aggregate=1')
+butDay.addEventListener('click', function () {
+    day(ask2);
+});
+function day(id) {
+    // let crypt = document.querySelector('input');
+    // console.log(crypt);
+    // console.log(crypt.value);
+    // let ask = crypt.value.toUpperCase();
+    // fetch(enterPointDay+ask+'&tsym=USD&limit=30&aggregate=1')
+    fetch(enterPointDay+id+'&tsym=USD&limit=30&aggregate=1')
         .then (function (response) {
             return response.json();
         })
