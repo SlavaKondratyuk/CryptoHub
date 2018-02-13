@@ -1,6 +1,13 @@
 const currencyList = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
 let box = document.querySelector('.box');
 let btcicon = 'http://bitcoin-4k.com/wp-content/uploads/2017/06/btc.png';
+const btn = document.querySelector('#btn-sort-max');
+const alph = document.querySelector ('#btn-sort-alph');
+const val = document.querySelector ('#btn-sort-min');
+const value = document.querySelector ('#btn-sort-day');
+const vall = document.querySelector ('#btn-sort-hour');
+
+
 
 function createCard(data) {
     let string = '';
@@ -17,16 +24,28 @@ function request(link) {
         .then(function (data) {
             console.log(data);
             createCard(data);
+            return data;
+        })
+        .then(function (data2) {
+            btn.addEventListener('click', function(){
+                createCard(max(data2));
+            });
+            alph.addEventListener('click', function(){
+                createCard(sort(data2));
+            });
+            val.addEventListener('click', function() {
+                createCard(min(data2));
+            });
+            value.addEventListener('click', function(){
+                createCard(day(data2));
+            });
+            vall.addEventListener('click', function(){
+                createCard(hour(data2));
+            });
+
         });
 }
 request(currencyList);
-
-
-//
-// $(document).ready(function(){
-//     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-//     $('.modal').modal();
-// });
 
 $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
