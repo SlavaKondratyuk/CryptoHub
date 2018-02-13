@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Title</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
@@ -9,22 +11,29 @@
 </head>
 <body>
 
+<!-- Modal Structure -->
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Modal Header</h4>
+        <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+</div>
 
-<!--<div class="row">-->
-    <!--<div class="col s12 m6">-->
-        <div class="card" style="width: 300px;">
-            <div class="card-image">
-                <img src="http://materializecss.com/images/sample-1.jpg">
-                <span class="card-title">Card Title</span>
-                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-            </div>
-            <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
-            </div>
-        </div>
-    <!--</div>-->
-<!--</div>-->
+<div class="box card-responsive"></div>
 
+        <!--<div class="card">-->
+            <!--<div class="card-image">-->
+                <!--<img src="http://materializecss.com/images/sample-1.jpg">-->
+                <!--<span class="card-title">Card Title</span>-->
+                <!--<a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modal1"><i class="material-icons">add</i></a>-->
+            <!--</div>-->
+            <!--<div class="card-content">-->
+                <!--<p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>-->
+            <!--</div>-->
+        <!--</div>-->
 
 
 <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
