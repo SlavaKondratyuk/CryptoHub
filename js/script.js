@@ -5,7 +5,7 @@ let btcicon = 'http://bitcoin-4k.com/wp-content/uploads/2017/06/btc.png';
 function createCard(data) {
     let string = '';
     for ( let i = 0; i < data.length; i++ ) {
-        string += `<div class="card"> <div class="card-image"> <img src="${btcicon}"> <span class="card-title"> ${data[i].name} </span> <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modal1" id="${data[i].symbol}"><i class="material-icons">add</i></a> </div>  <div class="card-content"> <p>rank: ${data[i].rank}</p> <p> ${data[i].symbol}: ${data[i].price_usd} USD</p> <h5>Change</h5> <div class="change-box"> <p class="change-item">1h: ${data[i].percent_change_1h}</p> <p class="change-item">24h: ${data[i].percent_change_24h}</p> <p class="change-item">7d: ${data[i].percent_change_7d}</p> </div> </div> </div> `;
+        string += `<div class="card"> <div class="card-image"> <img src="${btcicon}"> <span class="card-title"> ${data[i].name} </span> <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modal1" id="${data[i].symbol}"><i class="material-icons">add</i></a> </div>  <div class="card-content"> <p>rank: ${data[i].rank}</p> <p> ${data[i].symbol}: ${data[i].price_usd} USD</p> <h5 class="card-sub-title">Change</h5> <div class="change-box"> <p class="change-item">1h: ${data[i].percent_change_1h}</p> <p class="change-item">24h: ${data[i].percent_change_24h}</p> <p class="change-item">7d: ${data[i].percent_change_7d}</p> </div> </div> </div> `;
     }
     box.innerHTML = string;
 }
