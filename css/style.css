@@ -95,3 +95,7 @@
 .card-sub-title {
     text-align: center;
 }
+.container{
+    width: 1024px;
+    margin: 0 auto;
+}
