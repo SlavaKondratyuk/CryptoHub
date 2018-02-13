@@ -1,5 +1,6 @@
 const currencyList = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
 
+
 const btn = document.querySelector('#btn-sort-max');
 btn.addEventListener('click', function(){
     max(currencyList);
