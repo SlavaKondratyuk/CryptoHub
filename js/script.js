@@ -51,7 +51,7 @@ function requst() {
                 // console.log(arrow24);
                 string +=`<div class="card"> <div class="card-image"> <img src="${img}">
 <a href="#modal1" class="btn-floating halfway-fab waves-effect waves-light red waves-effect waves-light btn modal-trigger" ><i class="material-icons">add</i></a>         
-<p> ${data[i].name}:</p> ${data[i].price_usd} usd:<p> rank: ${data[i].rank}</p><div class="card-content"> <h4>Changes</h4> <p>1h: ${data[i].percent_change_1h}: ${arrow1h}: </p>  <p>24h: ${data[i].percent_change_24h}: ${arrow24h} </p><p>7d: ${data[i].percent_change_7d}: ${arrow7d}</p></div></div></div>`;
+<p> ${data[i].name}:</p> ${data[i].price_usd} usd:<p> rank: ${data[i].rank}</p><div class="card-content"> <h4>Changes</h4> <p>1h: ${data[i].percent_change_1h}: ${arrow1h}</p>  <p>24h: ${data[i].percent_change_24h}: ${arrow24h} </p><p>7d: ${data[i].percent_change_7d}: ${arrow7d}</p></div></div></div>`;
             }
             box.innerHTML = string;
 
