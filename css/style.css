@@ -1,0 +1,17 @@
+.up { color: rgba(9, 230, 52, 0.54); }
+.down { color: rgba(230, 58, 54, 0.54); }
+
+img{
+    width: 50%;
+}
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card .card-image img{
+    width: 60%;
+    margin: auto;
+}
