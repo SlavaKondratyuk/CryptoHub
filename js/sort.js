@@ -60,8 +60,18 @@ function sort(data){
                     return -1;
                 }
              });
+
         }
+
+function rank1(data){
+    return data.sort(function (a, b) {
+        return  a.rank - b.rank;
+    });
+
+}
 
 $(document).ready(function() {
     $('select').material_select();
 });
+
+$(".button-collapse").sideNav();
