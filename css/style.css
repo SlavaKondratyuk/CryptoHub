@@ -76,6 +76,9 @@
     }
 }
 
+.up { color: rgba(9, 230, 52, 0.54); }
+.down { color: rgba(230, 58, 54, 0.54); }
+
 .card .card-image img {
     width: 50%;
     margin: auto;
