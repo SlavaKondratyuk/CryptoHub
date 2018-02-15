@@ -1,17 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.card-responsive{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: space-around;
+}
+.col {
+    width: auto;
+}
+@media (min-width: 320px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+@media  (min-width: 480px) {
+    .card-responsive  {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (min-width: 601px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+}
+@media  (min-width: 768px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media  (min-width: 960px) {
+    .card-responsive {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (min-width: 1024px) {
+    .card-responsive  {
+        width: 100%;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+    .card-responsive {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 .up { color: rgba(9, 230, 52, 0.54); }
 .down { color: rgba(230, 58, 54, 0.54); }
 
-img{
+.card .card-image img {
     width: 50%;
-}
-
-.box{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.card .card-image img{
-    width: 60%;
     margin: auto;
+}
+.card .card-image .card-title {
+    color: black;
+}
+.change-box {
+    display: flex;
+}
+.card-content .change-box .change-item {
+    display: block;
+    width: 90px;
+    height: 30px;
+    margin: auto;
+}
+.card-sub-title {
+    text-align: center;
+}
+.container{
+    width: 1024px;
+    margin: 0 auto;
 }
