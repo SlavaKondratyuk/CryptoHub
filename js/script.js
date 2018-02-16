@@ -1,4 +1,4 @@
-const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=25';
+// const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=25';
 let box = document.querySelector('.box');
 let img = 'https://bitflyer.blob.core.windows.net/pub/Images/bitcoin-logo.png';
 let arrowUp = '<i class="tiny material-icons up">arrow_upward</i>';
@@ -7,26 +7,19 @@ let arrow1h = '';
 let arrow24h = '';
 let arrow7d = '';
 
-// $(document).ready(function(){
-//     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-//     $('.modal').modal();
-// });
-
-
-
-function requst() {
-    fetch(currencylist)
-        .then(function (response) {
-           return response.json()
-        })
-
-        .then(function (data) {
-
-            console.log(data);
+// function requst() {
+//     fetch(currencylist)
+//         .then(function (response) {
+//            return response.json()
+//         })
+//
+//         .then(function (data) {
+//
+//             console.log(data);
 
 const currencyList = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
-let box = document.querySelector('.box');
-let btcicon = 'http://bitcoin-4k.com/wp-content/uploads/2017/06/btc.png';
+// let box = document.querySelector('.box');
+// let btcicon = 'http://bitcoin-4k.com/wp-content/uploads/2017/06/btc.png';
 const btn = document.querySelector('#btn-sort-max');
 const alph = document.querySelector ('#btn-sort-alph');
 const val = document.querySelector ('#btn-sort-min');
@@ -38,7 +31,6 @@ const rank = document.querySelector ('#btn-sort-rank');
 
 function createCard(data) {
     let string = '';
-
 
     for ( let i = 0; i < data.length; i++ ) {
         if(data[i].percent_change_1h > 0){
@@ -109,33 +101,31 @@ $('.modal').modal({
         ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
             // alert("Ready");
             // console.log(modal, trigger);
-
-            even(trigger[0].id);
-            ask2 = trigger[0].id;
+            let grap = document.querySelector('.grap');
+            grap.innerHTML = `<canvas id="myChart"></canvas>`;
+            id = trigger[0].id;
+            graphOnOpen(id, 'histohour', 24, 'D.MM | HH:mm');
+            let modHead = document.querySelector('.modal-title');
+            modHead.textContent = id;
             console.log(trigger[0].id);
-
         },
         complete: function() {
             // alert('Closed');
         } // Callback for Modal close
     }
 );
+//             let string = '';
+//             for (let i = 0; i < data.length; i ++){
+//                 // console.log(arrow24);
+//                 string +=`<div class="card"> <div class="card-image"> <img src="${img}">
+// <a href="#modal1" class="btn-floating halfway-fab waves-effect waves-light red waves-effect waves-light btn modal-trigger" ><i class="material-icons">add</i></a>
+// <p> ${data[i].name}:</p> ${data[i].price_usd} usd:<p> rank: ${data[i].rank}</p><div class="card-content"> <h4>Changes</h4> <p>1h: ${data[i].percent_change_1h}:  </p>  <p>24h: ${data[i].percent_change_24h}:  </p><p>7d: ${data[i].percent_change_7d}: </p></div></div></div>`;
+//             }
+//             box.innerHTML = string;
 
-
-let ask2;
-
-            let string = '';
-            for (let i = 0; i < data.length; i ++){
-                // console.log(arrow24);
-                string +=`<div class="card"> <div class="card-image"> <img src="${img}">
-<a href="#modal1" class="btn-floating halfway-fab waves-effect waves-light red waves-effect waves-light btn modal-trigger" ><i class="material-icons">add</i></a>
-<p> ${data[i].name}:</p> ${data[i].price_usd} usd:<p> rank: ${data[i].rank}</p><div class="card-content"> <h4>Changes</h4> <p>1h: ${data[i].percent_change_1h}:  </p>  <p>24h: ${data[i].percent_change_24h}:  </p><p>7d: ${data[i].percent_change_7d}: </p></div></div></div>`;
-            }
-            box.innerHTML = string;
-
-        })
-}
-
-requst();
-
+//         })
+// }
+//
+// requst();
+//
 

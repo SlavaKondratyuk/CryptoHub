@@ -5,7 +5,7 @@ let cloud = document.createElement('i');
 let fragg = document.createDocumentFragment();
 let informBlock = document.createElement('div');
 //select directory
-let container = document.querySelector('.container');
+let container = document.querySelector('.container-grap');
 //classes
 but.classList.add('waves-effect', 'waves-light', 'btn','cli');
 butHour.classList.add('waves-effect', 'waves-light', 'btn','cli');
@@ -23,9 +23,10 @@ informBlock.append(butHour);
 informBlock.append(butDay);
 but.append(cloud);
 container.append(fragg);
-const currencyList = 'https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=1';
+// const currencyList = 'https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=1';
 
 let id;
+// let ask2;
 function graphUpdate(chart, id, time, limit, formatTime) {
     graphResponse(id, time, limit, formatTime)
         .then(function (data) {
@@ -56,6 +57,8 @@ function graphResponse(id, time, limit, formatTime) {
             return chartData;
         })
 }
+// var c = document.getElementById('myChart');
+// var canvas = c.getContext('2d');
 function graphOnOpen(id,time, limit, formatTime) {
     graphResponse(id, time, limit, formatTime)
         .then(function (data) {
@@ -70,7 +73,7 @@ function graphOnOpen(id,time, limit, formatTime) {
                 data: {
                     labels: item.time,
                     datasets: [{
-                        label: "price",
+                        label: "price USD",
                         backgroundColor: 'rgb(255, 99, 132)',
                         borderColor: 'rgb(255, 99, 132)',
                         data: item.price,
@@ -93,4 +96,4 @@ function graphOnOpen(id,time, limit, formatTime) {
             });
         })
 }
-graphOnOpen('btc', 'histohour', 24, 'D.MM | HH:mm');
+// graphOnOpen(id, 'histohour', 24, 'D.MM | HH:mm');
