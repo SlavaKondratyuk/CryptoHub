@@ -1,4 +1,4 @@
-const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=15';
+const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=25';
 let box = document.querySelector('.box');
 let img = 'https://bitflyer.blob.core.windows.net/pub/Images/bitcoin-logo.png';
 let arrowUp = '<i class="tiny material-icons up">arrow_upward</i>';

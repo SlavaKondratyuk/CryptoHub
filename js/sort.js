@@ -36,7 +36,7 @@ function hour(data){
         }
 
 function day(data){
-            return data.sort(function (a, b) {
+    return data.sort(function (a, b) {
                 return a.percent_change_24h - b.percent_change_24h;
                 });
         }
