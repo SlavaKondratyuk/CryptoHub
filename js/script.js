@@ -1,11 +1,11 @@
 const currencyList = "https://api.coinmarketcap.com/v1/ticker/?limit=30";
 let elem = '';
 let elemIndex;
-let priceValue = [];
-let priceFilter = [];
+let priceValue = []; //raw data from checkboxes
+let priceFilter = [];  //sorted data from checkboxes
 let dataAllPriceFilter = [];
 let dataAll;
-let priceCheckbox = 0;
+let priceCheckboxCounter = 0;
 
 //html structure
 let div = document.createElement('div');
@@ -120,30 +120,24 @@ function removeChart(elemIndex) {
     }
 }
 
-function filterByPrice(value) {
 
-    // let arr = [200, -100, 100, 50, 2000];
-    //
-    // let positiveArr = dataAll.filter(function(number) {
-    //     return number > value[0] && number < value[value.length - 1];
-    // });
-    //
-    // console.log( positiveArr );
+//filter by price function
+function filterByPrice(value) {
     dataAllPriceFilter = [];
     let checkBox = filterPrice.querySelectorAll('.filled-in');
-
-    if (priceCheckbox === checkBox.length) {
+    if (priceCheckboxCounter === checkBox.length || priceCheckboxCounter === 0) {
         dataAllPriceFilter = dataAll;
     } else {
-        for (let i = 0; i < dataAll.length; i++) {
-            if (dataAll[i].price_usd > value[0] && dataAll[i].price_usd < value[value.length - 1]){
-                dataAllPriceFilter.push(dataAll[i]);
-            }
-        }
+        dataAllPriceFilter = dataAll.filter(function(number, i, arr) {
+            return number.price_usd > +value[0] && number.price_usd < +value[value.length - 1];
+        });
+        console.log('first', value[0]);
+        console.log('last', value[value.length - 1]);
     }
-    console.log(dataAllPriceFilter);
 }
 
+
+//
 const click = document.getElementById('content');
 click.addEventListener('click', function (event) {
     elem = event.target.parentElement.id;
@@ -152,22 +146,24 @@ click.addEventListener('click', function (event) {
     removeChart(elemIndex);
 });
 
-const filterPrice = document.getElementById('filterPrice');
-filterPrice.addEventListener('click', function (event) {
+
+//filling array with values from checkboxes
+const filterPriceCheckbox = document.getElementById('filterPrice');
+filterPriceCheckbox.addEventListener('click', function (event) {
     if (event.target.checked === true) {
         priceValue.push(event.target.value);
-        priceCheckbox++;
+        priceCheckboxCounter++;
         console.log(priceValue);
     }
     else if (event.target.checked === false){
         priceValue.splice(priceValue.indexOf(event.target.value), 1);
-        priceCheckbox--;
+        priceCheckboxCounter--;
         console.log(priceValue);
     }
-
-    //filterByPrice(priceValue);
 });
 
+
+//sort array with filter values and apply sort function
 const filter = document.getElementById('filter');
 filter.addEventListener('click', function (event) {
     function compareNumeric(a, b) {
@@ -176,8 +172,6 @@ filter.addEventListener('click', function (event) {
 
     priceFilter = priceValue.join().split(',');
     priceFilter.sort(compareNumeric);
-
-    console.log(priceFilter);
 
     filterByPrice(priceFilter);
 });
