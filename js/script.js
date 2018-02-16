@@ -1,10 +1,16 @@
 const currencyList = "https://api.coinmarketcap.com/v1/ticker/?limit=30";
 let elem = '';
 let elemIndex;
+let priceValue = [];
+let priceFilter = [];
+let dataAllPriceFilter = [];
+let dataAll;
+let priceCheckbox = 0;
 
 //html structure
 let div = document.createElement('div');
 div.classList.add('row');
+div.id = 'content';
 document.body.appendChild(div);
 
 
@@ -16,6 +22,7 @@ function request(url) {
     })
     .then(function (data) {
         let string = '';
+        dataAll = data;
         for (let i = 0; i < data.length; i++ ) {
             string += `<div class="col s12 m6 l3" id="${data[i].id}-node">
                             <div class="card">
@@ -107,16 +114,70 @@ function removeChart(elemIndex) {
         setTimeout(function () {
             chartNode.remove();
             showChart(elemIndex);
-        }, 250);
+        }, 2000);
     } else {
         showChart(elemIndex);
     }
 }
 
-const click = document.querySelector('.row');
+function filterByPrice(value) {
+
+    // let arr = [200, -100, 100, 50, 2000];
+    //
+    // let positiveArr = dataAll.filter(function(number) {
+    //     return number > value[0] && number < value[value.length - 1];
+    // });
+    //
+    // console.log( positiveArr );
+    dataAllPriceFilter = [];
+    let checkBox = filterPrice.querySelectorAll('.filled-in');
+
+    if (priceCheckbox === checkBox.length) {
+        dataAllPriceFilter = dataAll;
+    } else {
+        for (let i = 0; i < dataAll.length; i++) {
+            if (dataAll[i].price_usd > value[0] && dataAll[i].price_usd < value[value.length - 1]){
+                dataAllPriceFilter.push(dataAll[i]);
+            }
+        }
+    }
+    console.log(dataAllPriceFilter);
+}
+
+const click = document.getElementById('content');
 click.addEventListener('click', function (event) {
     elem = event.target.parentElement.id;
     elemIndex = Array.from(this.childNodes).indexOf(document.getElementById(elem + '-node'));
     console.log('element ' + elem);
     removeChart(elemIndex);
+});
+
+const filterPrice = document.getElementById('filterPrice');
+filterPrice.addEventListener('click', function (event) {
+    if (event.target.checked === true) {
+        priceValue.push(event.target.value);
+        priceCheckbox++;
+        console.log(priceValue);
+    }
+    else if (event.target.checked === false){
+        priceValue.splice(priceValue.indexOf(event.target.value), 1);
+        priceCheckbox--;
+        console.log(priceValue);
+    }
+
+    //filterByPrice(priceValue);
+});
+
+const filter = document.getElementById('filter');
+filter.addEventListener('click', function (event) {
+    function compareNumeric(a, b) {
+        return a - b;
+    }
+
+    priceFilter = priceValue.join().split(',');
+    priceFilter.sort(compareNumeric);
+
+    console.log(priceFilter);
+
+    filterByPrice(priceFilter);
 });
