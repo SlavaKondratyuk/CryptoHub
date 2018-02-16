@@ -13,7 +13,7 @@ butDay.classList.add('waves-effect', 'waves-light', 'btn','cli');
 cloud.classList.add('material-icons', 'left');
 //input text
 but.textContent = 'Last 1h';
-cloud.textContent = 'cloud';
+// cloud.textContent = 'cloud';
 butHour.textContent = 'Last 24h';
 butDay.textContent = 'Last 30d';
 //put in
