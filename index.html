@@ -4,18 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
     <title>Title</title>
+
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
+<div class="container">
+<a id="btn-sort-max" class="waves-effect waves-light btn">min</a>
+<a id="btn-sort-min" class="waves-effect waves-light btn">max</a>
+<a id="btn-sort-hour" class="waves-effect waves-light btn">percent_change_per 1hour
+
+</a>
+<a id="btn-sort-day" class="waves-effect waves-light btn">percent_change_per day</a>
+<a id="btn-sort-alph" class="waves-effect waves-light btn">alph</a>
+</div>
 
 <!-- Modal Structure -->
 <div id="modal1" class="modal modal-fixed-footer">
     <div class="modal-content">
         <h4>Modal Header</h4>
         <p>A bunch of text</p>
+
+        <div class="container-grap">
+            <div class="grap">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
     </div>
     <div class="modal-footer">
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
@@ -40,6 +60,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+<script src="js/sort.js"></script>
+<script src="java_12.02.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
