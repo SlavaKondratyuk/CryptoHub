@@ -127,13 +127,16 @@ function filterByPrice(value) {
     let checkBox = filterPrice.querySelectorAll('.filled-in');
     if (priceCheckboxCounter === checkBox.length || priceCheckboxCounter === 0) {
         dataAllPriceFilter = dataAll;
+    } else if (priceCheckboxCounter === 1 && checkBox[checkBox.length - 1].checked === true) {
+        dataAllPriceFilter = dataAll.filter(function(number, i, arr) {
+            return number.price_usd >= +value[value.length - 1];
+        });
     } else {
         dataAllPriceFilter = dataAll.filter(function(number, i, arr) {
             return number.price_usd > +value[0] && number.price_usd < +value[value.length - 1];
         });
-        console.log('first', value[0]);
-        console.log('last', value[value.length - 1]);
     }
+    console.log(dataAllPriceFilter);
 }
 
 
@@ -153,12 +156,11 @@ filterPriceCheckbox.addEventListener('click', function (event) {
     if (event.target.checked === true) {
         priceValue.push(event.target.value);
         priceCheckboxCounter++;
-        console.log(priceValue);
+        console.log(event.target.checked);
     }
     else if (event.target.checked === false){
         priceValue.splice(priceValue.indexOf(event.target.value), 1);
         priceCheckboxCounter--;
-        console.log(priceValue);
     }
 });
 
