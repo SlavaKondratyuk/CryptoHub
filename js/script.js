@@ -1,4 +1,4 @@
-const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=15';
+const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=25';
 let box = document.querySelector('.box');
 let img = 'https://bitflyer.blob.core.windows.net/pub/Images/bitcoin-logo.png';
 let arrowUp = '<i class="tiny material-icons up">arrow_upward</i>';
@@ -23,8 +23,6 @@ function requst() {
         .then(function (data) {
 
             console.log(data);
-            let string = '';
-            for (let i = 0; i < data.length; i ++){
 
 const currencyList = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
 let box = document.querySelector('.box');
@@ -34,6 +32,7 @@ const alph = document.querySelector ('#btn-sort-alph');
 const val = document.querySelector ('#btn-sort-min');
 const value = document.querySelector ('#btn-sort-day');
 const vall = document.querySelector ('#btn-sort-hour');
+const rank = document.querySelector ('#btn-sort-rank');
 
 
 
@@ -92,6 +91,9 @@ function request(link) {
             vall.addEventListener('click', function(){
                 createCard(hour(data2));
             });
+            rank.addEventListener('click', function(){
+                createCard(rank1(data2));
+            });
 
         });
 }
@@ -122,7 +124,8 @@ $('.modal').modal({
 
 let ask2;
 
-
+            let string = '';
+            for (let i = 0; i < data.length; i ++){
                 // console.log(arrow24);
                 string +=`<div class="card"> <div class="card-image"> <img src="${img}">
 <a href="#modal1" class="btn-floating halfway-fab waves-effect waves-light red waves-effect waves-light btn modal-trigger" ><i class="material-icons">add</i></a>
@@ -134,3 +137,5 @@ let ask2;
 }
 
 requst();
+
+

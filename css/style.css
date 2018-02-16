@@ -12,6 +12,12 @@
 .col {
     width: auto;
 }
+
+.waves-effect{
+    display: block;
+    margin-bottom: 10px;
+}
+
 @media (min-width: 320px) {
     .card-responsive {
         width: 100%;
