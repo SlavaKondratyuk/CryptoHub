@@ -222,10 +222,16 @@ function even(id) {
                 // Configuration options go here
                 options: {}
             });
+
             butClean.addEventListener('click', function () {
-                console.log('test');
-                removeData(chart)
-            });
+                    console.log('test');
+                    chart.clear();
+                });
+
+            // butClean.addEventListener('click', function () {
+            //     console.log('test');
+            //     removeData(chart)
+            // });
 
         })
 }
