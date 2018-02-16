@@ -18,6 +18,15 @@
     margin-bottom: 10px;
 }
 
+.modal.modal-fixed-footer {
+    height: 85%;
+}
+.modal {
+    max-height: 90%;
+    width: 80%;
+    top: 5%;
+}
+
 @media (min-width: 320px) {
     .card-responsive {
         width: 100%;
