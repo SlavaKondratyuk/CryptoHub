@@ -114,7 +114,7 @@ function removeChart(elemIndex) {
         setTimeout(function () {
             chartNode.remove();
             showChart(elemIndex);
-        }, 2000);
+        }, 250);
     } else {
         showChart(elemIndex);
     }
