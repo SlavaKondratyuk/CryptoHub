@@ -12,6 +12,12 @@
 .col {
     width: auto;
 }
+
+.waves-effect{
+    /*display: block;*/
+    margin-bottom: 10px;
+}
+
 @media (min-width: 320px) {
     .card-responsive {
         width: 100%;
@@ -75,6 +81,9 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.up { color: rgba(9, 230, 52, 0.54); }
+.down { color: rgba(230, 58, 54, 0.54); }
 
 .card .card-image img {
     width: 50%;
