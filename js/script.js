@@ -46,6 +46,41 @@ function currencyBox(data) {
 
 
 
+
+
+
+
+let enterPoint = 'https://min-api.cryptocompare.com/data/histominute?fsym=';
+let enterPointHour = 'https://min-api.cryptocompare.com/data/histohour?fsym=';
+let enterPointDay = 'https://min-api.cryptocompare.com/data/histoday?fsym=';
+const currencyList2 = 'https://min-api.cryptocompare;.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=1';
+
+
+
+
+
+var ctx = document.getElementById('myChart').getContext('2d');
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: item.time,
+        datasets: [{
+            label: "price",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: item.price,
+        }]
+    },
+
+    options: {}
+})
+
+
+
+
 //
 // const isJSON = (input) => (
 //     input.length && rxOne.test(
