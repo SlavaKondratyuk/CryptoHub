@@ -117,7 +117,7 @@ function request (link) {
         .then( function (response) {
             return response.json()
         })
-        .then(function (data) {
+        .then(function (data) {         // name
             console.log(data.Data);
 
             let timeArr = data.Data.map(function (min) {
