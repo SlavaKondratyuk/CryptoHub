@@ -116,19 +116,19 @@ body {
     }
 }
 
-.up { 
+.up {
     color: rgba(9, 230, 52, 1);
     font-size: 1.1rem;
     font-weight: bold;
  }
-.down { 
+.down {
     color: rgba(230, 58, 54, 1);
     font-size: 1.1rem;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .card .card-image {
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 .card .card-image img {
@@ -168,4 +168,9 @@ body {
 
 a {
     color: orange;
+}
+.cryptocurrency {
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: #fff721;
 }
