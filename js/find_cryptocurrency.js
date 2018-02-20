@@ -117,17 +117,16 @@ function request(link) {
         });
 }
 request(currencyList);
-
+// find
                 function find() {
                     fetch(currencyList)
                         .then( function (responce) {
                             return responce.json();
                         })
                         .then(function (data) {
-                            // console.log(data[0].symbol);
-                            let inputLover = inputCurency.value.toLowerCase();
+                           let inputToLover = inputCurency.value.toLowerCase();
                             let rezolt  = data.filter(function (temp) {
-                                if(inputLover === temp.id.toLowerCase() || inputLover ===  temp.symbol.toLowerCase()  ){
+                                if(inputToLover === temp.id.toLowerCase() || inputToLover ===  temp.symbol.toLowerCase()  ){
                                     return  temp;
                                 }
                             });
@@ -139,7 +138,7 @@ request(currencyList);
 
                     find();
                 });
-
+//find
 
 
 $('.modal').modal({
