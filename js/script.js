@@ -57,6 +57,9 @@ function createCard(data) {
     }
     box.innerHTML = string;
 }
+
+
+
 function request(link) {
     fetch(link)
         .then(function (response) {

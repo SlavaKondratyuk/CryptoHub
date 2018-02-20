@@ -26,6 +26,7 @@ container.append(fragg);
 // const currencyList = 'https://min-api.cryptocompare.com/data/histominute?fsym=BTC&tsym=USD&limit=60&aggregate=1';
 
 let id;
+
 // let ask2;
 function graphUpdate(chart, id, time, limit, formatTime) {
     graphResponse(id, time, limit, formatTime)
@@ -38,6 +39,7 @@ function graphUpdate(chart, id, time, limit, formatTime) {
             chart.update();
         });
 }
+
 function graphResponse(id, time, limit, formatTime) {
     console.log('time',time);
     return fetch(`https://min-api.cryptocompare.com/data/${time}?fsym=${id.toUpperCase()}&tsym=USD&limit=${limit}&aggregate=1`)
