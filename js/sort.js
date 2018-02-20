@@ -31,13 +31,13 @@
 
 function hour(data){
             return data.sort(function (a, b) {
-                return a.percent_change_1h - b.percent_change_1h;
+                return b.percent_change_1h - a.percent_change_1h;
             });
         }
 
 function day(data){
     return data.sort(function (a, b) {
-                return a.percent_change_24h - b.percent_change_24h;
+                return b.percent_change_24h - a.percent_change_24h;
                 });
         }
 
