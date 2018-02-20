@@ -2,8 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846057c4-d10c-435b-b3e6-e19aa1bb5f98" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/graph2.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/BinanceCoin.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/ICONProject.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/neo.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/binance-coin.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/bitcoin-cash.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/bitcoin-gold.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/bitcoin.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/bytecoin-bcn.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/cardano.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/dash.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/eos.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/ethereum-classic.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/ethereum.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/icon.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/iota.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/lisk.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/litecoin.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/monero.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/nem.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/neo.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/omisego.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/populous.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/qtum.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/raiblocks.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/raiblocks.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/ripple.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/steem.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/stellar.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/stratis.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/tether.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/tron.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/vechain.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/verge.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/img/svg/zcash.svg" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/img/BitcoinGold.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/img/aelf.png" afterPath="$PROJECT_DIR$/img/aelf.png" />
+      <change beforePath="$PROJECT_DIR$/img/hshare.png" afterPath="$PROJECT_DIR$/img/hshare.png" />
+      <change beforePath="$PROJECT_DIR$/img/iostoken.png" afterPath="$PROJECT_DIR$/img/iostoken.png" />
+      <change beforePath="$PROJECT_DIR$/img/lisk.png" afterPath="$PROJECT_DIR$/img/lisk.png" />
+      <change beforePath="$PROJECT_DIR$/img/monero.png" afterPath="$PROJECT_DIR$/img/monero.png" />
+      <change beforePath="$PROJECT_DIR$/img/populous.png" afterPath="$PROJECT_DIR$/img/populous.png" />
+      <change beforePath="$PROJECT_DIR$/img/qtum.png" afterPath="$PROJECT_DIR$/img/qtum.png" />
+      <change beforePath="$PROJECT_DIR$/img/vechain.png" afterPath="$PROJECT_DIR$/img/vechain.png" />
+      <change beforePath="$PROJECT_DIR$/img/waves.png" afterPath="$PROJECT_DIR$/img/waves.png" />
+      <change beforePath="$PROJECT_DIR$/img/zcash.png" afterPath="$PROJECT_DIR$/img/zcash.png" />
+      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/index_12.02.html" afterPath="$PROJECT_DIR$/index_12.02.html" />
       <change beforePath="$PROJECT_DIR$/java_12.02.js" afterPath="$PROJECT_DIR$/java_12.02.js" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
+      <change beforePath="$PROJECT_DIR$/js/sort.js" afterPath="$PROJECT_DIR$/js/sort.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,56 +69,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="405">
-                  <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index_12.02.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/index_12.02.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="50" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="java_12.02.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/java_12.02.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="945">
-                  <caret line="119" column="47" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="47" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="script.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/js/script.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="465">
-                  <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="795">
+              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -79,11 +104,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/sort.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/script.js" />
         <option value="$PROJECT_DIR$/java_12.02.js" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -175,12 +200,12 @@
       <workItem from="1518430650007" duration="56000" />
       <workItem from="1518534158743" duration="453000" />
       <workItem from="1518768435599" duration="3946000" />
-      <workItem from="1518884236977" duration="599000" />
+      <workItem from="1518884236977" duration="1273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11230000" />
+    <option name="totallyTimeSpent" value="11904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
@@ -357,26 +382,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/style_12.02.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -388,18 +397,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/script.js">
+    <entry file="file://$PROJECT_DIR$/java_12.02.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="39" column="55" lean-forward="true" selection-start-line="39" selection-start-column="55" selection-end-line="39" selection-end-column="55" />
+        <state relative-caret-position="5640">
+          <caret line="370" column="0" lean-forward="true" selection-start-line="370" selection-start-column="0" selection-end-line="370" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/java_12.02.js">
+    <entry file="file://$PROJECT_DIR$/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="119" column="47" lean-forward="false" selection-start-line="119" selection-start-column="47" selection-end-line="119" selection-end-column="47" />
+        <state relative-caret-position="645">
+          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="20" lean-forward="false" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
