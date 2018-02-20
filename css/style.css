@@ -136,7 +136,7 @@ body {
     width: 50%;
     margin: auto;
     max-height: 220px;
-    /*min-height: 220px;*/
+    min-height: 220px;
 }
 .card .card-image .card-title {
     color: black;
