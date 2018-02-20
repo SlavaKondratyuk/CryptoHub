@@ -5,6 +5,7 @@ let btnInput = document.createElement('a');
 //
 // class
 inputCurency.classList.add("validate");
+inputCurency.placeholder = 'Enter curency';
 btnInput.classList.add('waves-effect', 'waves-light', 'btn','cryptocurrency');
 btnInput.textContent = 'find cryptocurrency';
 
