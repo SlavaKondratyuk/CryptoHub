@@ -31,13 +31,13 @@
 
 function hour(data){
             return data.sort(function (a, b) {
-                return a.percent_change_1h - b.percent_change_1h;
+                return b.percent_change_1h - a.percent_change_1h;
             });
         }
 
 function day(data){
-            return data.sort(function (a, b) {
-                return a.percent_change_24h - b.percent_change_24h;
+    return data.sort(function (a, b) {
+                return b.percent_change_24h - a.percent_change_24h;
                 });
         }
 
@@ -60,8 +60,18 @@ function sort(data){
                     return -1;
                 }
              });
+
         }
+
+function rank1(data){
+    return data.sort(function (a, b) {
+        return  a.rank - b.rank;
+    });
+
+}
 
 $(document).ready(function() {
     $('select').material_select();
 });
+
+$(".button-collapse").sideNav();

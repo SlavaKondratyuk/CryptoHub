@@ -18,7 +18,6 @@ conteiner.append(btnInput);
 
 ///yura
 
-
 const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=15';
 let box = document.querySelector('.box');
 let img = 'https://bitflyer.blob.core.windows.net/pub/Images/bitcoin-logo.png';
@@ -55,6 +54,7 @@ const alph = document.querySelector ('#btn-sort-alph');
 const val = document.querySelector ('#btn-sort-min');
 const value = document.querySelector ('#btn-sort-day');
 const vall = document.querySelector ('#btn-sort-hour');
+const rank = document.querySelector ('#btn-sort-rank');
 
 
 
@@ -113,6 +113,9 @@ function request(link) {
             vall.addEventListener('click', function(){
                 createCard(hour(data2));
             });
+            rank.addEventListener('click', function(){
+                createCard(rank1(data2));
+            });
 
         });
 }
@@ -151,9 +154,12 @@ $('.modal').modal({
         ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
             // alert("Ready");
             // console.log(modal, trigger);
-
-            even(trigger[0].id);
-            ask2 = trigger[0].id;
+            let grap = document.querySelector('.grap');
+            grap.innerHTML = `<canvas id="myChart"></canvas>`;
+            id = trigger[0].id;
+            graphOnOpen(id, 'histohour', 24, 'D.MM | HH:mm');
+            let modHead = document.querySelector('.modal-title');
+            modHead.textContent = id;
             console.log(trigger[0].id);
 
         },
