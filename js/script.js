@@ -6,7 +6,15 @@ let arrowDown = '<i class="tiny material-icons down">arrow_downward</i>';
 let arrow1h = '';
 let arrow24h = '';
 let arrow7d = '';
+let elem = '';
+let elemIndex;
+let priceValue = []; //raw data from checkboxes
+let priceFilter = [];  //sorted data from checkboxes
 let dataAll;
+let dataAllPriceFilter = [];
+let priceCheckboxCounter = 0;
+let filterCounter = 0;
+let dataSortValue;
 
 // function requst() {
 //     fetch(currencylist)
@@ -57,6 +65,16 @@ function createCard(data) {
     box.innerHTML = string;
 }
 
+function dataSort() {
+    if (filterCounter === 1) {
+        dataSortValue = dataAllPriceFilter;
+        console.log('filter', dataSortValue);
+    } else {
+        console.log('NO filter', dataSortValue);
+        dataSortValue = data2;
+    }
+}
+
 function request(link) {
     fetch(link)
         .then(function (response) {
@@ -70,24 +88,29 @@ function request(link) {
         })
         .then(function (data2) {
             btn.addEventListener('click', function(){
-                createCard(max(data2));
+                dataSort();
+                createCard(max(dataSortValue));
             });
             alph.addEventListener('click', function(){
-                createCard(sort(data2));
+                dataSort();
+                createCard(sort(dataSortValue));
             });
             val.addEventListener('click', function() {
-                createCard(min(data2));
+                dataSort();
+                createCard(min(dataSortValue));
             });
             value.addEventListener('click', function(){
-                createCard(day(data2));
+                dataSort();
+                createCard(day(dataSortValue));
             });
             vall.addEventListener('click', function(){
-                createCard(hour(data2));
+                dataSort();
+                createCard(hour(dataSortValue));
             });
             rank.addEventListener('click', function(){
-                createCard(rank1(data2));
+                dataSort();
+                createCard(rank1(dataSortValue));
             });
-
         });
 }
 request(currencyList);
@@ -129,12 +152,6 @@ $('.modal').modal({
 //
 // requst();
 //
-let elem = '';
-let elemIndex;
-let priceValue = []; //raw data from checkboxes
-let priceFilter = [];  //sorted data from checkboxes
-let dataAllPriceFilter = [];
-let priceCheckboxCounter = 0;
 
 //filter by price function
 function filterByPrice(value) {
@@ -145,6 +162,18 @@ function filterByPrice(value) {
     } else if (priceCheckboxCounter === 1 && checkBox[checkBox.length - 1].checked === true) {
         dataAllPriceFilter = dataAll.filter(function(number, i, arr) {
             return number.price_usd >= +value[value.length - 1];
+        });
+    } else if (priceCheckboxCounter > 1 && checkBox[checkBox.length - 1].checked === true){
+        console.log('log');
+        console.log(+value[0]);
+        console.log(+value[value.length - 2]);
+        console.log(+value[value.length - 1]);
+        dataAllPriceFilter = dataAll.filter(function(number, i, arr) {
+            let a = [];
+            let b = [];
+            a = number.price_usd > +value[0] && number.price_usd < +value[value.length - 2];
+            b = number.price_usd >= +value[value.length - 1];
+            return  a + b;
         });
     } else {
         dataAllPriceFilter = dataAll.filter(function(number, i, arr) {
@@ -176,8 +205,10 @@ filter.addEventListener('click', function (event) {
         return a - b;
     }
 
+    filterCounter = 1;
+
     priceFilter = priceValue.join().split(',');
     priceFilter.sort(compareNumeric);
-
+    console.log(priceFilter);
     filterByPrice(priceFilter);
 });
