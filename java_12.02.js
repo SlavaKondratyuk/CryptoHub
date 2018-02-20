@@ -117,7 +117,7 @@ function request (link) {
         .then( function (response) {
             return response.json()
         })
-        .then(function (data) {
+        .then(function (data) {         // name
             console.log(data.Data);
 
             let timeArr = data.Data.map(function (min) {
@@ -222,10 +222,16 @@ function even(id) {
                 // Configuration options go here
                 options: {}
             });
+
             butClean.addEventListener('click', function () {
-                console.log('test');
-                removeData(chart)
-            });
+                    console.log('test');
+                    chart.clear();
+                });
+
+            // butClean.addEventListener('click', function () {
+            //     console.log('test');
+            //     removeData(chart)
+            // });
 
         })
 }
