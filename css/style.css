@@ -5,9 +5,16 @@
 }
 
 body {
+    /*overflow: hidden;*/
     padding: 20px;
     background: lightslategray;
 }
+.container{
+
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
 
 .card-responsive{
     display: grid;
@@ -20,7 +27,6 @@ body {
 }
 
 .waves-effect{
-    /*display: block;*/
     margin-bottom: 10px;
 }
 
@@ -57,6 +63,7 @@ body {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
 }
+
 @media  (min-width: 480px) {
     .card-responsive  {
         width: 100%;
@@ -110,19 +117,19 @@ body {
     }
 }
 
-.up { 
+.up {
     color: rgba(9, 230, 52, 1);
     font-size: 1.1rem;
     font-weight: bold;
  }
-.down { 
+.down {
     color: rgba(230, 58, 54, 1);
     font-size: 1.1rem;
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 .card .card-image {
-    padding-top: 20px; 
+    padding-top: 20px;
 }
 
 .card .card-image img {
@@ -175,11 +182,6 @@ body {
     font-size: 30px;
     font-weight: bold;
 }
-.container{
-    min-width: 320px;
-    max-width: 1024px;
-    margin: 0 auto;
-}
 
 .container-grap div {
     display: flex;
@@ -191,8 +193,16 @@ body {
 a {
     color: orange;
 }
+
 p {
     font-family: 'Istok Web', sans-serif;
     font-weight: bold;
     font-size: 15px;
+}
+
+.cryptocurrency {
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: #fff721;
+
 }
