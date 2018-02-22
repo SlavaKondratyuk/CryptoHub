@@ -206,3 +206,8 @@ p {
     color: #fff721;
 
 }
+/*newfind */
+.dropdown-content {
+    display: block;
+    opacity: 1;
+}
