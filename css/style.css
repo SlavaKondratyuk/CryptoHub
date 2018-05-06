@@ -186,7 +186,7 @@ body {
 .container-grap div {
     display: flex;
     margin: auto;
-    width: 70%;
+    width: 71%;
     justify-content: space-evenly;
 }
 
@@ -210,4 +210,7 @@ p {
 .dropdown-content {
     display: block;
     opacity: 1;
+}
+.hl {
+    background-color: #fff721;
 }

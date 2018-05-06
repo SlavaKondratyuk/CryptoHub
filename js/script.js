@@ -1,50 +1,9 @@
-// // //yura
-// let conteiner = document.querySelector('.input-cryptocurrency');
-// let inputCurency = document.createElement('input');
-// let btnInput = document.createElement('a');
-// //
-// //
-// // // class
-// inputCurency.classList.add("validate");
-// btnInput.classList.add('waves-effect', 'waves-light', 'btn','cryptocurrency');
-// btnInput.textContent = 'find cryptocurrency';
-//
-// conteiner.append(inputCurency);
-// conteiner.append(btnInput);
-// // //yura create function
-//
-//
-// //yura
-//
-// ///yura
-
-// const currencylist = 'https://api.coinmarketcap.com/v1/ticker/?limit=15';
-// let box = document.querySelector('.box');
 let img = 'https://bitflyer.blob.core.windows.net/pub/Images/bitcoin-logo.png';
 let arrowUp = '<i class="tiny material-icons up">arrow_upward</i>';
 let arrowDown = '<i class="tiny material-icons down">arrow_downward</i>';
 let arrow1h = '';
 let arrow24h = '';
 let arrow7d = '';
-
-// $(document).ready(function(){
-//     // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
-//     $('.modal').modal();
-// });
-
-
-
-// function requst() {
-//     fetch(currencylist)
-//         .then(function (response) {
-//            return response.json()
-//         })
-//
-//         .then(function (data) {
-//
-//             console.log(data);
-//             let string = '';
-//             for (let i = 0; i < data.length; i ++){
 
 const currencyList = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
 let box = document.querySelector('.box');
@@ -123,29 +82,6 @@ function request(link) {
         });
 }
 request(currencyList);
-// // find
-//                 function find() {
-//                     fetch(currencyList)
-//                         .then( function (responce) {
-//                             return responce.json();
-//                         })
-//                         .then(function (data) {
-//                            let inputToLover = inputCurency.value.toLowerCase();
-//                             let rezolt  = data.filter(function (temp) {
-//                                 if(inputToLover === temp.id.toLowerCase() || inputToLover ===  temp.symbol.toLowerCase()  ){
-//                                     return  temp;
-//                                 }
-//                             });
-//                             createCard(rezolt);
-//                         })
-//
-//                 }
-//                 btnInput.addEventListener('click',function () {
-//
-//                     find();
-//                 });
-// //find
-
 
 $('.modal').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -171,19 +107,3 @@ $('.modal').modal({
         } // Callback for Modal close
     }
 );
-//
-//
-// let ask2;
-//
-//
-//                 // console.log(arrow24);
-//                 string +=`<div class="card"> <div class="card-image"> <img src="${img}">
-// <a href="#modal1" class="btn-floating halfway-fab waves-effect waves-light red waves-effect waves-light btn modal-trigger" ><i class="material-icons">add</i></a>
-// <p> ${data[i].name}:</p> ${data[i].price_usd} usd:<p> rank: ${data[i].rank}</p><div class="card-content"> <h4>Changes</h4> <p>1h: ${data[i].percent_change_1h}:  </p>  <p>24h: ${data[i].percent_change_24h}:  </p><p>7d: ${data[i].percent_change_7d}: </p></div></div></div>`;
-//             }
-//             box.innerHTML = string;
-//
-//         })
-// }
-//
-// requst();

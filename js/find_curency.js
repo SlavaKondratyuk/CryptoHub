@@ -37,7 +37,12 @@ const currencyList1 = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
             return filterArr;
         };
         function showResult() {
-            let resultArr = findCyrrency(this.value,names);
+            if (document.querySelector('.validate').value === '') {
+                ul.innerHTML= '';
+                window.removeEventListener('keypress', enterpres);
+                request(currencyList);
+            } else {
+                let resultArr = findCyrrency(this.value,names);
             console.log(this.value);
             let html =  resultArr.map(item =>{
                 const regex = new RegExp(this.value, 'gi');
@@ -48,6 +53,9 @@ const currencyList1 = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
         </li>`
             }).join('');
             ul.innerHTML = html;
+            window.addEventListener('keypress', enterpres);
+
+        }    
         }
          const input = document.querySelector('.validate');
                 input.addEventListener('input',showResult);
@@ -62,9 +70,10 @@ const currencyList1 = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
             createCard(rezolt);
       });
         // странно ,но не срабатует ентер,
-        window.addEventListener('keypress', function () {
+        function enterpres() {
+            // console.log(event.target.value.toLowerCase())
             if (event.keyCode === 13) {
-               input.value = event.target.textContent.toLowerCase();
+               input.value = event.target.value.toLowerCase();
                     ul.innerHTML= '';
                 let rezolt  = arr.filter(function (temp) {
                     if(input.value === temp.id.toLowerCase() || input.value ===  temp.symbol.toLowerCase()  ){
@@ -72,7 +81,9 @@ const currencyList1 = 'https://api.coinmarketcap.com/v1/ticker/?limit=30';
                     }
                 });
                 createCard(rezolt);
-            }});
+            }
+        }
+       
         // странно ,но не срабатует
     });
 // create function filter (name,symbol)
